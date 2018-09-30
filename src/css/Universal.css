@@ -32,6 +32,9 @@ height:100%;width:100%;
 .row15{
   height: 100%;width:15%;
 }
+.row18{
+  height: 100%;width:18%;
+}
 .row20{
   height: 100%;width:20%;
 }
@@ -79,6 +82,9 @@ height:100%;width:100%;
 }
 .row95{
   height: 100%;width:95%;
+}
+.row105{
+  height: 100%;width:105%;
 }
 .row110{
   height: 100%;width:110%;
@@ -168,6 +174,12 @@ height:100%;width:100%;
   font-weight: bold;
   color: #fefefe;
 }
+.fontStyle6{
+  font-size: 10px;
+  font-weight: bold;
+  color: #e6351d;
+  cursor:pointer
+}
 /* 手机按钮样式************************************************************************************  */
 .mButton1{
   width: 80px;
@@ -178,7 +190,86 @@ height:100%;width:100%;
   background-color: #409EFF;
   color: #fefefe;
 }
+/* border样式************************************************************************************  */
+.borderStyle{
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
+}
+.borderStyle1{
+  border: 1px dashed #a0a0a0;
+  border-radius: 5px;
+}
+.borderStyle2{
+  border-bottom: 1px solid #9d9d9d;
+}
+.borderStyle3{
+  border-bottom: 1px dashed #9d9d9d;
+}
+.borderStyle4{
+  border: 2px solid #a0a0a0;
+  border-radius: 5px;
+}
+.borderStyle5{
+  border: 2px dashed #a0a0a0;
+  border-radius: 5px;
+}
+/*box-shadow: h-shadow v-shadow blur spread color inset; 水平阴影的位置,垂直阴影的位置,模糊距离,阴影的尺寸,阴影的颜色,inset/outset*/
+.borderStyle6{
+  box-shadow: 0px 5px 20px 5px #717171;
+  border-radius: 5px;
+}
+.borderStyle7{
+  box-shadow: 0px 3px 15px 3px  #a0a0a0 inset;
+  border-radius: 5px;
+}
+.borderStyle8{
+  box-shadow: 0px 0px 50px 5px #ffa50d;
+  border-radius: 5px;
+}
+.borderStyle9{
+  box-shadow: 0px 3px 15px 3px #ff6120 inset;
+  border-radius: 5px;
+}
+.borderStyle10{
+  border: 5px solid #676767;
+  border-radius: 5px;
+}
+.borderStyle11{
+  border: 2px solid #0b0d0d;
+  border-radius: 5px;
+}
+.borderStyle12{
+  border: 2px solid #e6351d;
+}
+/* box样式************************************************************************************  */
+.boxStyle{
+  height: 98%;width: 98%;
+}
+.boxStyle1{
+  height: 35%;width: 20%;
+}
+.boxStyle2{
+  height: 45%;width: 20%;
+}
+.boxStyle3{
+  overflow-y: auto;
+}
+.boxStyle4{
+  height: 50%;width: 60%;
+}
+.boxStyle5{
+  overflow: hidden;
+}
+.boxStyle6{
+  overflow-y: scroll;
+}
+.boxStyle7{
+  height: 70%;width: 30%;
+}
 /* 背景颜色样式************************************************************************************  */
+.bgc0{
+  background-color: #3a3a3a;
+}
 .bgc1{
   background-color: #777777;
 }
@@ -199,6 +290,95 @@ height:100%;width:100%;
 }
 .bgc7{
   background-color: #409EFF;
+}
+.bgc8{
+  background-color: #ffa50d;
+}
+.bgc9{
+  background-color: #ff6120;
+}
+.bgc10{
+  background-color: #eeeeee;
+}
+.bgc11{
+  background-color: #fbfbfb;
+}
+.bgc12{
+  background-color: #fdf9ec;
+}
+/* 图片样式************************************************************************************  */
+.imgStyle{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.imgStyle1{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.imgStyle2{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.imgStyle3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.imgStyle4{
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+.imgStyle5{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+.imgStyle6{
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+}
+.imgStyle7{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.imgStyle8{
+  height: 50px;
+  width: 50px;
+}
+.imgStyle9{
+  height: 25px;
+  width: 25px;
+}
+.imgStyle10{
+  height: 35px;
+  width: 35px;
+}
+.imgStyle11{
+  height: 45px;
+  width: 45px;
+}
+.imgStyle12{
+  height: 65px;
+  width: 65px;
+}
+.imgStyle13{
+  height: 75px;
+  width: 75px;
+}
+.imgStyle14{
+  height: 85px;
+  width: 85px;
+}
+.imgStyle15{
+  height: 100px;
+  width: 100px;
+
 }
 
 .row-center{

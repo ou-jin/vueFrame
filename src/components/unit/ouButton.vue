@@ -6,7 +6,9 @@
         width:this.width,
         backgroundColor:this.backgroundColor,
         fontSize:this.fontSize
-        }">{{this.value}}</button>
+        }"
+        @click="click"
+>{{this.value}}</button>
 </template>
 
 <script>
@@ -26,6 +28,11 @@
       },
       data(){
         return{
+        }
+      },
+      methods:{
+        click(){
+          this.$emit('click')
         }
       },
         name: ""

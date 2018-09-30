@@ -11,10 +11,47 @@
     </div>
 
     <div class="column50 row-start-wrap">
-      <div class="box column-start-center"  v-for="item in bcgList" :class="item.type">
-        <div class="fontStyle4" :class="item.type">{{item.type}}</div>
+      <div class="box column-start-center"  v-for="(item,index) in bcgList" :class="item.type">
+        <div :class="index>8?'item.type fontStyle3':'fontStyle4 item.type'">{{item.type}}</div>
       </div>
     </div>
+
+    <!--******************************************border样式**********************************************-->
+    <div class="column5 fontStyle2 bgc1 row-flex-start">
+      <div class="row10 row-center">
+        border样式
+      </div>
+    </div>
+
+    <div class="column50 row-start-wrap">
+      <div class="box column-center"  v-for="item in borderList" >
+
+        <div class="column20 row-center">
+          <div class="row80 fontStyle3 row-center":class="item.type">{{item.type}}</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--******************************************img样式**********************************************-->
+    <div class="column5 fontStyle2 bgc1 row-flex-start">
+      <div class="row10 row-center">
+        img样式
+      </div>
+    </div>
+
+    <div class="column50 row-start-wrap">
+      <div class="row20 column-center box"  v-for="item in imgList" >
+
+        <div class="column30 column-start-center fontStyle3">
+          {{item.type}}
+        </div>
+        <div class="column70 column-center">
+          <img :class="item.type" src="../img/tx.png"></img>
+        </div>
+      </div>
+    </div>
+
 
 <!--******************************************字体样式**********************************************-->
     <div class="column5 fontStyle2 bgc1 row-flex-start">
@@ -225,7 +262,126 @@
       </div>
     </div>
 
-    <!--******************************************  工具组件**********************************************-->
+    <!--******************************************  常用页面  **********************************************-->
+    <div class="column5 fontStyle2 bgc1 row-flex-start">
+      <div class="row30 row-flex-start">
+        常用页面组件
+      </div>
+    </div>
+    <div class="column5 fontStyle3 row-flex-start">
+      <div class="row30 row-flex-start">
+        说明：所有组件皆以height:100%/width:100%布局，请在外部限定大小
+      </div>
+    </div>
+
+
+    <div class="column10 fontStyle3 row-flex-start">
+      <div class="row5 row-flex-start">
+        <OuButton value="登录" @click="changePage('login')"></OuButton>
+      </div>
+      <div class="row5 row-flex-start" @click="changePage('codeLogin')">
+        <OuButton value="验证码登录"></OuButton>
+      </div>
+      <div class="row5 row-flex-start">
+        <OuButton value="注册" @click="changePage('register')"></OuButton>
+      </div>
+      <div class="row5 row-flex-start">
+        <OuButton value="经典表单" @click="changePage('classicForm')"></OuButton>
+      </div>
+      <div class="row5 row-flex-start">
+        <OuButton value="经典表格" @click="changePage('rowTable')"></OuButton>
+      </div>
+      <div class="row10 row-flex-start">
+        <OuButton value="管理系统经典页面" @click="changePage('manager')" width="100%"></OuButton>
+      </div>
+    </div>
+
+    <div class="column90 row-center">
+      <div class="row65 column-start-center">
+        <div class="column85 row-center borderStyle10">
+          <div class="boxStyle row-center borderStyle6">
+
+            <div class="boxStyle1" v-show="pageShow==='login'">
+              <LoginBox  ></LoginBox>
+            </div>
+
+            <div class="boxStyle1" v-show="pageShow==='codeLogin'">
+              <CodeLoginBox ></CodeLoginBox>
+            </div>
+
+            <div class="boxStyle2" v-show="pageShow==='register'">
+              <RegisterBox ></RegisterBox>
+            </div>
+
+            <div class="boxStyle4" v-show="pageShow==='rowTable'">
+              <RowTable ></RowTable>
+            </div>
+
+            <div class="boxStyle7" v-show="pageShow==='classicForm'">
+              <ClassicForm ></ClassicForm>
+            </div>
+
+
+
+            <router-view v-show="pageShow==='manager'"></router-view>
+
+          </div>
+        </div>
+        <div class="column10 row-center">
+          <div class="row15 bgc0 borderStyle"></div>
+        </div>
+        <div class="column5  row-center ">
+          <div class="row50 bgc0"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--******************************************  移动端常用布局  **********************************************-->
+
+    <div class="column5 fontStyle2 bgc1 row-flex-start">
+      <div class="row30 row-flex-start ">
+        移动端常用布局
+      </div>
+    </div>
+    <div class="column10 fontStyle3 row-flex-start">
+      <div class="row5 row-flex-start">
+        <OuButton value="布局1" @click="changeMPage('login')"></OuButton>
+      </div>
+      <div class="row5 row-flex-start" @click="changeMPage('codeLogin')">
+        <OuButton value="布局2"></OuButton>
+      </div>
+      <div class="row5 row-flex-start">
+        <OuButton value="布局3" @click="changeMPage('register')"></OuButton>
+      </div>
+      <div class="row5 row-flex-start">
+        <OuButton value="布局4" @click="changeMPage('classicForm')"></OuButton>
+      </div>
+ 
+
+    </div>
+
+    <div class="column75 row-center">
+      <div class="row18 column-start-center">
+        <div class="column10 modelH column-center">
+          <div class="column10 row-center">
+            <div class="row15 bgc0 borderStyle"></div>
+          </div>
+        </div>
+        <div class="column70  row-center">
+          <div class="row5 modelCL"></div>
+          <div class="row90 "></div>
+          <div class="row5 modelCR"></div>
+
+        </div>
+        <div class="column10 modelB column-center">
+          <div class="column65 row-center">
+            <div class="row15 modelBB borderStyle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -461,6 +617,9 @@
           testValue:'',
           bcgList:[
             {
+              type:'bgc0'
+            },
+            {
               type:'bgc1'
             },
             {
@@ -481,12 +640,139 @@
             {
               type:'bgc7'
             },
+            {
+              type:'bgc8'
+            },
+            {
+              type:'bgc9'
+            },
+            {
+              type:'bgc10'
+            },
+            {
+              type:'bgc11'
+            },
+            {
+              type:'bgc12'
+            },
 
           ],
+          borderList:[
+            {
+              type:'borderStyle'
+            },
+            {
+              type:'borderStyle1'
+            },
+            {
+              type:'borderStyle2'
+            },
+            {
+              type:'borderStyle3'
+            },
+            {
+              type:'borderStyle4'
+            },
+            {
+              type:'borderStyle5'
+            }
+            ,
+            {
+              type:'borderStyle6'
+            },
+            {
+              type:'borderStyle7'
+            },
+            {
+              type:'borderStyle8'
+            }
+            ,
+            {
+              type:'borderStyle9'
+            }
+
+          ],
+          imgList:[
+            {
+              type:'imgStyle'
+            },
+            {
+              type:'imgStyle1'
+            },
+            {
+              type:'imgStyle2'
+            },
+            {
+              type:'imgStyle3'
+            },
+            {
+              type:'imgStyle4'
+            },
+            {
+              type:'imgStyle5'
+            }
+            ,
+            {
+              type:'imgStyle6'
+            },
+            {
+              type:'imgStyle7'
+            },
+            {
+              type:'imgStyle8'
+            }
+            ,
+            {
+              type:'imgStyle9'
+            }
+            ,        {
+              type:'imgStyle10'
+            },
+            {
+              type:'imgStyle11'
+            },
+            {
+              type:'imgStyle12'
+            },
+            {
+              type:'imgStyle13'
+            },
+            {
+              type:'imgStyle14'
+            },
+            {
+              type:'imgStyle15'
+            }
+            ,
+     /*       {
+              type:'imgStyle16'
+            },
+            {
+              type:'imgStyle17'
+            },
+            {
+              type:'imgStyle18'
+            }
+            ,
+            {
+              type:'imgStyle19'
+            }*/
+          ],
+          pageShow:'login',
+          phonePageShow:'layout1'
         }
       },
         name: "",
       methods:{
+          changePage(s){
+            this.pageShow=s
+            if(s === 'manager') {
+              this.$router.push({ path: 'home' })
+            }
+          },
+          changeMPage(s){
+
+          },
           httpTest() {
             this.$http({
               url: this.$http.adornUrl(''),
@@ -501,6 +787,28 @@
 </script>
 
 <style scoped>
+  .modelH{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  /*box-shadow: h-shadow v-shadow blur spread color inset; 水平阴影的位置,垂直阴影的位置,模糊距离,阴影的尺寸,阴影的颜色,inset/outset*/
+    box-shadow: 0px 5px 10px 5px #e2e2e2 inset;
+  }
+  .modelB{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    /*box-shadow: h-shadow v-shadow blur spread color inset; 水平阴影的位置,垂直阴影的位置,模糊距离,阴影的尺寸,阴影的颜色,inset/outset*/
+    box-shadow: 0px -5px 10px 5px #e2e2e2 inset;
+  }
+  .modelCR{
+    box-shadow: -5px 0px 5px 3px #e6e6e6 inset;
+  }
+  .modelCL{
+    box-shadow: 5px 0px 5px 3px #e6e6e6 inset;
+  }
+  .modelBB{
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px #d9d9d9 inset;
+  }
 .box{
   width: 10%;
   height: 40%;

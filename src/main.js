@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import httpRequest from '@/http/httpRequest' // api: https://github.com/axios/axios
 import commentCss from './css/Universal.css'
 import components from './plugins/components.js'
+import store from '@/store'
 Vue.use(components)
 Vue.use(commentCss)
 Vue.use(ElementUI)
@@ -17,6 +18,7 @@ Vue.prototype.$http = httpRequest
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
